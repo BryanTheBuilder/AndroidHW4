@@ -6,12 +6,15 @@ public class LinkedListStack_Queue {
         private String tempRemoveCopy;
         private String tempAddCopy;
 
-    public void push()
+     public void push()
     {
+        if( stack_Queue.size() == 10 ){
+            System.out.println("List is full start making space ");
+        } else{
         System.out.println("Enter String: ");
         String userIN = keyboard.nextLine();
         setAddCopy(userIN);
-        stack_Queue.add(userIN);
+        stack_Queue.add(userIN); }
     }
 
     public void setAddCopy(String userIN)
@@ -19,9 +22,11 @@ public class LinkedListStack_Queue {
         this.tempAddCopy = userIN;
     }
 
-    public void copy()
+     public void copy()
     {
-        stack_Queue.add(tempAddCopy);
+        if( stack_Queue.size() == 10 ) {
+            System.out.println("List is full start making space ");
+        } else{ stack_Queue.add(tempAddCopy);}
     }
 
     public void setTempRemovCopy( String userIN) {
